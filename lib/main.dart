@@ -5,7 +5,7 @@ void main() => runApp(MyApp());
 
 /// This Widget is the main application widget.
 class MyApp extends StatelessWidget {
-  static const String _title = 'Jdroid';
+  static const String _title = 'Beba - Hitch a Ride';
 
   @override
   Widget build(BuildContext context) {
@@ -53,6 +53,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Beba'),
+        backgroundColor:Colors.blue[400]
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
@@ -71,7 +72,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               ),
             ),
             ListTile(
-              title: Text('Find Ride'),
+              leading: Icon(Icons.drive_eta),
+              title: Text('Find a Ride'),
               onTap: () {
                 // Update the state of the app
                 // ...
@@ -80,19 +82,23 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               },
             ),
             ListTile(
-              title: Text('Offer Ride'),
+              leading: Icon(Icons.drive_eta),
+              title: Text('Offer a Ride'),
               onTap: () {
                 Navigator.pop(context);
               },
             ),
             ListTile(
-              title: Text('About'),
+              leading: Icon(Icons.info_outline),
+              title: Text('About Us'),
               onTap: () {
                 Navigator.pop(context);
               },
             ),
+            Divider(color: Colors.blueGrey[900],thickness:1),
             ListTile(
-              title: Text("Login"),
+              leading: Icon(Icons.login_rounded),
+              title: Text("Sign Up"),
               onTap: () {
                 Navigator.pop(context);
               },
