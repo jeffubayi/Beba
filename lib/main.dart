@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'drawer.dart';
 
 void main() => runApp(MyApp());
 
@@ -28,14 +29,33 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-    Text(
+    
+         Text(
       'Welcome to Beba',
       style: optionStyle,
-    ),
-    Text(
-      'Find Trip',
-      style: optionStyle,
-    ),
+    ),         
+    TextField(
+                  textAlign: TextAlign.left,
+                  style: TextStyle(fontSize: 22.0),
+                  decoration: InputDecoration(
+                      contentPadding:  EdgeInsets.symmetric(horizontal: 24),
+                      enabledBorder: const OutlineInputBorder(
+                       borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                      borderSide: const BorderSide(
+                         color: Colors.grey,
+              ),
+            ),
+                      prefixIcon: Padding(
+                        padding: EdgeInsets.all(0.0),
+                        child: Icon(
+                          Icons.search,
+                          color: Colors.blue,
+                        ), // icon is 48px widget.
+                      ),
+                      hintText: 'Search for a Ride,Location',
+                      hintStyle: TextStyle(fontSize: 22.0)),
+                      
+                ),
     Text(
       'My Profile',
       style: optionStyle,
@@ -52,60 +72,21 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Beba'),
+       title: const Text('Beba'),
+       actions: <Widget>[
+                IconButton(
+                  icon: Image.asset('beba.png',fit: BoxFit.cover,height: 33),
+                  onPressed: () {  
+                  },
+                ),],
+          
         backgroundColor:Colors.blue[400]
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
+        
       ),
-       drawer: Drawer(
-        child: ListView(
-          // Important: Remove any padding from the ListView.
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            DrawerHeader(
-              child: Text('Beba'),
-              decoration: BoxDecoration(
-                image:DecorationImage(
-                  image: AssetImage("Carpooling.png"),
-                  fit:BoxFit.cover)
-              ),
-            ),
-            ListTile(
-              leading: Icon(Icons.drive_eta),
-              title: Text('Find a Ride'),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.drive_eta),
-              title: Text('Offer a Ride'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.info_outline),
-              title: Text('About Us'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            Divider(color: Colors.blueGrey[900],thickness:1),
-            ListTile(
-              leading: Icon(Icons.login_rounded),
-              title: Text("Sign Up"),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-          ],
-        ),
-      ),
+       drawer: Sidenav(),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -114,11 +95,11 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.directions_car),
-            title: Text('Trips'),
+            title: Text('Get a Ride'),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.account_circle),
-            title: Text('Profile'),
+            title: Text('My Profile'),
           ),
         ],
         currentIndex: _selectedIndex,
