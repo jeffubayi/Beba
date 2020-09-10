@@ -1,8 +1,18 @@
-# jdroid
+# Beba
 
-A new Flutter project.
+Ride sharing App.
+
+## [Live Demo](https://wabebe-58522.web.app/#/)
 
 ## Getting Started
+
+1. Clone the project
+
+2. Cd Beba
+
+3. For Mobile: `Flutter run ios /android` [choose environment].
+
+4. For Web : `Flutter create .` && `Flutter run web`
 
 This project is a starting point for a Flutter application.
 
