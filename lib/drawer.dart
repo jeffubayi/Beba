@@ -8,7 +8,7 @@ class Sidenav extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Beba")),
+      appBar: AppBar(title: Text("BIGR")),
       drawer: Drawer(
         child: ListView(
           // Important: Remove any padding from the ListView.

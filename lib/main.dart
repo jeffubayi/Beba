@@ -75,7 +75,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
        title: const Text('Beba'),
        actions: <Widget>[
                 IconButton(
-                  icon: Image.asset('beba.png',fit: BoxFit.cover,height: 33),
+                  icon:new Image(image: AssetImage("assets/images/beba.png")),
+                  
                   onPressed: () {  
                   },
                 ),],

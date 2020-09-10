@@ -15,8 +15,8 @@ class About extends StatelessWidget {
             SizedBox(height: 50.0),
             Column(
               children: <Widget>[
-                Image.asset('Carpooling.png'),
-                SizedBox(height: 7.0),
+                Image.asset('beba.png'),
+                SizedBox(height: 2.0),
               ],
             )
            ] 

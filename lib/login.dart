@@ -23,7 +23,7 @@ class _LoginState extends State<Login> {
           children: <Widget>[
             Column(
               children: <Widget>[
-                Image.asset('beba.png'),
+                Image.asset('images/beba.png',height: 180),
                 SizedBox(height: 1.0),
               ],
             ),
@@ -93,6 +93,7 @@ class _LoginState extends State<Login> {
                 // TODO: Add a beveled rectangular border to NEXT (103)
                 MaterialButton(
   onPressed: () {
+
   },
   shape: const StadiumBorder(),
   textColor: Colors.black,
