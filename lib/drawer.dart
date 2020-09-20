@@ -8,9 +8,10 @@ class Sidenav extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("BIGR")),
+      appBar: AppBar(title: Text("Beba")),
       drawer: Drawer(
         child: ListView(
+           
           // Important: Remove any padding from the ListView.
           padding: EdgeInsets.zero,
           children: <Widget>[
@@ -23,7 +24,7 @@ class Sidenav extends StatelessWidget {
               ),
             ),
             ListTile(
-              leading: Icon(Icons.drive_eta,color:Colors.lightBlueAccent[400]),
+              leading: Icon(Icons.drive_eta,color:Colors.amber[900]),
               title: Text('Find a Ride'),
               onTap: () {
                 // Update the state of the app
@@ -35,7 +36,7 @@ class Sidenav extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: Icon(Icons.drive_eta,color:Colors.lightBlueAccent[400]),
+              leading: Icon(Icons.drive_eta,color:Colors.amber[900]),
               title: Text('Offer a Ride'),
               onTap: () {
                 Navigator.pop(context);
@@ -44,7 +45,7 @@ class Sidenav extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: Icon(Icons.info_outline,color:Colors.lightBlueAccent[400]),
+              leading: Icon(Icons.info_outline,color:Colors.amber[900]),
               title: Text('About Us'),
               onTap: () {
                 Navigator.pop(context);
@@ -54,7 +55,7 @@ class Sidenav extends StatelessWidget {
             ),
             Divider(color: Colors.blueGrey[900],thickness:.6),
             ListTile(
-              leading: new Icon(Icons.login_rounded,color:Colors.lightBlueAccent[400]),
+              leading: new Icon(Icons.login_rounded,color:Colors.amber[900]),
               title: Text("Sign Up"),
               onTap: () {
                 Navigator.of(context).pop();

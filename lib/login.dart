@@ -15,7 +15,7 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Sign Up") ,backgroundColor: Colors.blue[400]),
+      appBar: AppBar(title: Text("Sign Up") ,backgroundColor: Colors.grey[900]),
       drawer: Sidenav(),
       body: SafeArea(
         child: ListView(
@@ -31,13 +31,13 @@ class _LoginState extends State<Login> {
             // TODO: Remove filled: true values (103)
             TextField(
               decoration: new InputDecoration(
-            prefixIcon:  Icon(Icons.person_add),
+            prefixIcon:  Icon(Icons.person_add,color:Colors.amber[900]),
             labelText: "Username",
             hintText: 'Enter your name',
             enabledBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(20.0)),
               borderSide: const BorderSide(
-                color: Colors.grey,
+                color: Colors.orange,
               ),
             ),
             focusedBorder: OutlineInputBorder(
@@ -50,13 +50,13 @@ class _LoginState extends State<Login> {
             SizedBox(height: 12.0,width: 50,),
             TextField(
               decoration: new InputDecoration(
-            prefixIcon:  Icon(Icons.attach_email),
+            prefixIcon:  Icon(Icons.attach_email,color:Colors.amber[900]),
             labelText: "Email",
             hintText: 'Enter your Email',
             enabledBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(20.0)),
               borderSide: const BorderSide(
-                color: Colors.grey,
+                color: Colors.orange,
               ),
             ),
             focusedBorder: OutlineInputBorder(
@@ -69,12 +69,12 @@ class _LoginState extends State<Login> {
             SizedBox(height: 12.0,width: 50,),
             TextField(
               decoration: new InputDecoration(
-            prefixIcon:  Icon(Icons.enhanced_encryption),
-            labelText: "Password",
+            prefixIcon:  Icon(Icons.enhanced_encryption,color:Colors.amber[900]),
+            labelText: "Password",fillColor: Colors.orange,
             enabledBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(20.0)),
               borderSide: const BorderSide(
-                color: Colors.grey,
+                color: Colors.orange,
               ),
             ),
             focusedBorder: OutlineInputBorder(
@@ -86,6 +86,7 @@ class _LoginState extends State<Login> {
              
             SizedBox(height: 12.0,width: 50,),
             ButtonBar(
+               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 // TODO: Add a beveled rectangular border to CANCEL (103)
                
@@ -96,11 +97,11 @@ class _LoginState extends State<Login> {
 
   },
   shape: const StadiumBorder(),
-  textColor: Colors.black,
-  color: Colors.blue[300],
-  splashColor: Colors.blue[900],
-  disabledColor: Colors.grey,
-  disabledTextColor: Colors.white,
+  textColor: Colors.white,
+  color: Colors.orange[800],
+  splashColor: Colors.orange[900],
+  disabledColor: Colors.orange[900],
+  disabledTextColor: Colors.orange[900],
   child: Text('Login'),
 ),
               ],

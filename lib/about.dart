@@ -6,7 +6,8 @@ class About extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("About Beba")),
+      appBar: AppBar(title: Text("About Beba"),
+              backgroundColor: Colors.grey[850]),
       drawer: Sidenav(),
       body: SafeArea(
         child: ListView(
@@ -15,8 +16,8 @@ class About extends StatelessWidget {
             SizedBox(height: 50.0),
             Column(
               children: <Widget>[
-                Image.asset('beba.png'),
-                SizedBox(height: 2.0),
+                Image.asset("Carpool.gif"),
+                SizedBox(height: 125),
               ],
             )
            ] 

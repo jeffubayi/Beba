@@ -14,7 +14,7 @@ class OfferFormState extends State<OfferForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Share your Ride") ,backgroundColor: Colors.blue[400]),
+      appBar: AppBar(title: Text("Share your Ride") ,backgroundColor: Colors.grey[900]),
       drawer: Sidenav(),
       body: SafeArea(
         child: ListView(
@@ -25,13 +25,13 @@ class OfferFormState extends State<OfferForm> {
             // TODO: Remove filled: true values (103)
            TextField(
               decoration: new InputDecoration(
-            prefixIcon:  Icon(Icons.location_pin),
+            prefixIcon:  Icon(Icons.location_pin,color:Colors.amber[900]),
             labelText: "From",
             hintText: 'Enter your location..',
             enabledBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(20.0)),
               borderSide: const BorderSide(
-                color: Colors.grey,
+                color: Colors.orange,
               ),
             ),
             focusedBorder: OutlineInputBorder(
@@ -45,13 +45,13 @@ class OfferFormState extends State<OfferForm> {
             // TODO: Wrap Password with AccentColorOverride (103)
             TextField(
               decoration: new InputDecoration(
-            prefixIcon:  Icon(Icons.location_pin),
+            prefixIcon:  Icon(Icons.location_pin,color:Colors.amber[900]),
             labelText: "To",
             hintText: 'Enter your destination..',
             enabledBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(20.0)),
               borderSide: const BorderSide(
-                color: Colors.grey,
+                color: Colors.orange,
               ),
             ),
             focusedBorder: OutlineInputBorder(
@@ -63,13 +63,13 @@ class OfferFormState extends State<OfferForm> {
             SizedBox(height: 12.0,width: 50,),
             TextField(
               decoration: new InputDecoration(
-            prefixIcon:  Icon(Icons.event),
+            prefixIcon:  Icon(Icons.event,color:Colors.amber[900]),
             labelText: "Select Date",
             hintText: 'Pickup time and day..',
             enabledBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(20.0)),
               borderSide: const BorderSide(
-                color: Colors.grey,
+                color: Colors.orange,
               ),
             ),
             focusedBorder: OutlineInputBorder(
@@ -81,13 +81,13 @@ class OfferFormState extends State<OfferForm> {
              SizedBox(height: 12.0,width: 50,),
             TextField(
               decoration: new InputDecoration(
-            prefixIcon:  Icon(Icons.trip_origin),
+            prefixIcon:  Icon(Icons.trip_origin,color:Colors.amber[900]),
             labelText: "Pick up",
             hintText: 'Enter meeting point.. ',
             enabledBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(20.0)),
               borderSide: const BorderSide(
-                color: Colors.grey,
+                color: Colors.orange,
               ),
             ),
             focusedBorder: OutlineInputBorder(
@@ -99,13 +99,13 @@ class OfferFormState extends State<OfferForm> {
             SizedBox(height: 12.0,width: 50,),
             TextField(
               decoration: new InputDecoration(
-            prefixIcon:  Icon(Icons.pin_drop),
+            prefixIcon:  Icon(Icons.pin_drop,color:Colors.amber[900]),
             labelText: "Drop off",
             hintText: 'Enter end point..',
             enabledBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(10.0)),
               borderSide: const BorderSide(
-                color: Colors.grey,
+                color: Colors.orange,
               ),
             ),
             focusedBorder: OutlineInputBorder(
@@ -121,7 +121,7 @@ class OfferFormState extends State<OfferForm> {
                 // TODO: Add an elevation to NEXT (103)
                 // TODO: Add a beveled rectangular border to NEXT (103)
                 RaisedButton.icon(
-                   color: Colors.blue[400],
+                   color: Colors.orange[900],
                    onPressed: () {
         // Respond to button press
                },

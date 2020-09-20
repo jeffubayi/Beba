@@ -16,7 +16,7 @@ class FindFormState extends State<FindForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Search for a Ride") ,backgroundColor: Colors.blue[400]),
+      appBar: AppBar(title: Text("Search for a Ride") ,backgroundColor: Colors.grey[900]),
       drawer: Sidenav(),
       body: SafeArea(
         child: ListView(
@@ -27,13 +27,13 @@ class FindFormState extends State<FindForm> {
             // TODO: Remove filled: true values (103)
            TextField(
               decoration: new InputDecoration(
-            prefixIcon:  Icon(Icons.location_pin),
+            prefixIcon:  Icon(Icons.location_pin,color:Colors.amber[900]),
             labelText: "From",
             hintText: 'Enter your location..',
             enabledBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(20.0)),
               borderSide: const BorderSide(
-                color: Colors.grey,
+                color: Colors.orange,
               ),
             ),
             focusedBorder: OutlineInputBorder(
@@ -47,13 +47,13 @@ class FindFormState extends State<FindForm> {
             // TODO: Wrap Password with AccentColorOverride (103)
             TextField(
               decoration: new InputDecoration(
-            prefixIcon:  Icon(Icons.location_pin),
+            prefixIcon:  Icon(Icons.location_pin,color:Colors.amber[900]),
             labelText: "To",
             hintText: 'Enter your destination..',
             enabledBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(20.0)),
               borderSide: const BorderSide(
-                color: Colors.grey,
+                color: Colors.orange,
               ),
             ),
             focusedBorder: OutlineInputBorder(
@@ -65,13 +65,13 @@ class FindFormState extends State<FindForm> {
             SizedBox(height: 12.0,width: 50,),
             TextField(
               decoration: new InputDecoration(
-            prefixIcon:  Icon(Icons.timer_rounded),
+            prefixIcon:  Icon(Icons.timer_rounded,color:Colors.amber[900]),
             labelText: "Pickup Time",
             hintText: 'Select time..',
             enabledBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(20.0)),
               borderSide: const BorderSide(
-                color: Colors.grey,
+                color: Colors.orange,
               ),
             ),
             focusedBorder: OutlineInputBorder(
@@ -84,13 +84,13 @@ class FindFormState extends State<FindForm> {
             SizedBox(height: 12.0,width: 50,),
             TextField(
               decoration: new InputDecoration(
-            prefixIcon:  Icon(Icons.event),
+            prefixIcon:  Icon(Icons.event,color:Colors.amber[900]),
             labelText: "Departure Date",
             hintText: 'Select day..',
             enabledBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(20.0)),
               borderSide: const BorderSide(
-                color: Colors.grey,
+                color: Colors.orange,
               ),
             ),
             focusedBorder: OutlineInputBorder(
@@ -106,7 +106,7 @@ class FindFormState extends State<FindForm> {
                 // TODO: Add an elevation to NEXT (103)
                 // TODO: Add a beveled rectangular border to NEXT (103)
                 RaisedButton.icon(
-                   color: Colors.blue[400],
+                   color: Colors.orange[800],
                    onPressed: () {
         // Respond to button press
                },

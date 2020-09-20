@@ -42,14 +42,14 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                       enabledBorder: const OutlineInputBorder(
                        borderRadius: BorderRadius.all(Radius.circular(20.0)),
                       borderSide: const BorderSide(
-                         color: Colors.grey,
+                         color: Colors.orange,
               ),
             ),
                       prefixIcon: Padding(
                         padding: EdgeInsets.all(0.0),
                         child: Icon(
                           Icons.search,
-                          color: Colors.blue,
+                          color: Colors.orange,
                         ), // icon is 48px widget.
                       ),
                       hintText: 'Search for a Ride,Location',
@@ -81,7 +81,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   },
                 ),],
           
-        backgroundColor:Colors.blue[400]
+        backgroundColor:Colors.grey[900]
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
@@ -104,7 +104,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: Colors.orange[800],
         onTap: _onItemTapped,
       ),
     );
