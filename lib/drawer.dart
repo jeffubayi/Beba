@@ -3,12 +3,25 @@ import 'login.dart';
 import 'about.dart';
 import 'find.dart';
 import 'offer.dart';
+import 'rate.dart';
 
 class Sidenav extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Beba")),
+      appBar: AppBar(
+       title: const Text('Beba'),
+       actions: <Widget>[
+                IconButton(
+                  icon:new Image(image: AssetImage("assets/images/beba.png")),
+                  
+                  onPressed: () {  
+                  },
+                ),],
+          
+        backgroundColor:Colors.grey[900]
+      ),
+     // appBar: AppBar(title: Text("Beba")),
       drawer: Drawer(
         child: ListView(
            
@@ -53,6 +66,15 @@ class Sidenav extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => About()));
               },
             ),
+             ListTile(
+              leading: Icon(Icons.star_border,color:Colors.amber[900]),
+              title: Text('Reviews'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push<void>(context,
+                  MaterialPageRoute(builder: (context) => RateScreen()));
+              },
+            ),
             Divider(color: Colors.blueGrey[900],thickness:.6),
             ListTile(
               leading: new Icon(Icons.login_rounded,color:Colors.amber[900]),
@@ -66,6 +88,23 @@ class Sidenav extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            title: Text('Home'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.directions_car),
+            title: Text('Get a Ride'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.account_circle),
+            title: Text('My Profile'),
+          ),
+        ],
+        selectedItemColor: Colors.orange[800],
+      )
     );
   }
 }

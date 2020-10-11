@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'drawer.dart';
 
 
 class OfferForm extends StatefulWidget {
@@ -15,7 +14,6 @@ class OfferFormState extends State<OfferForm> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Share your Ride") ,backgroundColor: Colors.grey[900]),
-      drawer: Sidenav(),
       body: SafeArea(
         child: ListView(
           padding: EdgeInsets.symmetric(horizontal: 24.0),

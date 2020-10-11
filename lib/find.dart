@@ -1,7 +1,6 @@
 
 
 import 'package:flutter/material.dart';
-import 'drawer.dart';
 
 
 class FindForm extends StatefulWidget {
@@ -17,7 +16,6 @@ class FindFormState extends State<FindForm> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Search for a Ride") ,backgroundColor: Colors.grey[900]),
-      drawer: Sidenav(),
       body: SafeArea(
         child: ListView(
           padding: EdgeInsets.symmetric(horizontal: 15.0),
@@ -100,6 +98,7 @@ class FindFormState extends State<FindForm> {
           ),
             ), 
             ButtonBar(
+              mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 // TODO: Add a beveled rectangular border to CANCEL (103)
                

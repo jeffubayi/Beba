@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'main.dart';
+import 'package:jdroid/drawer.dart';
 import 'drawer.dart';
 
 
@@ -16,7 +16,6 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Sign Up") ,backgroundColor: Colors.grey[900]),
-      drawer: Sidenav(),
       body: SafeArea(
         child: ListView(
           padding: EdgeInsets.symmetric(horizontal: 20.0),
@@ -50,9 +49,9 @@ class _LoginState extends State<Login> {
             SizedBox(height: 12.0,width: 50,),
             TextField(
               decoration: new InputDecoration(
-            prefixIcon:  Icon(Icons.attach_email,color:Colors.amber[900]),
-            labelText: "Email",
-            hintText: 'Enter your Email',
+            prefixIcon:  Icon(Icons.phone_iphone,color:Colors.amber[900]),
+            labelText: "Phone",
+            hintText: 'Enter your Phone number',
             enabledBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(20.0)),
               borderSide: const BorderSide(
@@ -94,6 +93,9 @@ class _LoginState extends State<Login> {
                 // TODO: Add a beveled rectangular border to NEXT (103)
                 MaterialButton(
   onPressed: () {
+     Navigator.pop(context);
+                Navigator.push<void>(context,
+                  MaterialPageRoute(builder: (context) => Sidenav()));
 
   },
   shape: const StadiumBorder(),

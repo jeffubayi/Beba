@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'drawer.dart';
 
 class About extends StatelessWidget {
 
@@ -8,7 +7,6 @@ class About extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text("About Beba"),
               backgroundColor: Colors.grey[850]),
-      drawer: Sidenav(),
       body: SafeArea(
         child: ListView(
           padding: EdgeInsets.symmetric(horizontal: 24.0),
