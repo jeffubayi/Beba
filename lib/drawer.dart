@@ -32,7 +32,7 @@ class Sidenav extends StatelessWidget {
               child: Text('Beba'),
               decoration: BoxDecoration(
                 image:DecorationImage(
-                  image: AssetImage("Carpooling.png"),
+                  image: AssetImage("assets/images/Carpooling.png"),
                   fit:BoxFit.cover)
               ),
             ),
